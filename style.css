@@ -1,0 +1,178 @@
+/* фон */
+body {
+    background-color: rgb(179, 213, 218); 
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/*  маркеры списка менюха*/
+/* ссылки меню */
+
+/* меню */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #6d96ad; 
+    padding: 10px;
+}
+nav ul li a {
+    color: white;         
+    font-size: 18px;      
+    text-decoration: none;  /* Убрать подчеркивание */
+    font-weight: bold;    
+    display: block;         /* Чтобы ссылки были удобными */
+    padding: 5px 10px;
+}
+nav ul li a:hover {
+    background-color: #44687c; /* Цвет при наведении */
+    background-color: #78a1b7; /* Цвет при наведении */
+}
+
+
+/* подзаголовки */
+h2 {
+    color: black;          
+    font-size: 18px;       
+    font-weight: 400;    
+    background-color: #dfeaff; 
+    padding: 10px;         
+    border-radius: 5px;     /* Скругление углов */
+}
+/* заголовки */
+h1 {
+    color: #1c4355;     
+    font-size: 32px;        
+    font-weight: 700;     
+    text-align: center;   
+}
+
+/* Для краткого описания товара */
+.short-desc {
+    color: #1c4355; 
+    font-size: 14px;         
+    font-style: italic;       
+    line-height: 16px;       
+}
+
+/* Для подробного описания товара */
+.full-desc {
+    color: #0e1d25;    
+    font-size: 16px;         
+    font-weight: 400;          
+    line-height: 24px;        
+    text-align: left;          
+}
+
+/* Для списка характеристик товара */
+.specs-list {
+    color: #1c4355;    
+    font-weight: bold;
+    list-style: none;
+}
+.specs-list li {
+    position: relative;     /* Чтобы иконка позиционировалась относительно li */
+    padding-left: 30px;     /* Чтобы текст не наехал на листик */
+    margin-bottom: 8px;    
+}
+.specs-list li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+}
+
+
+/* Управление каталогом */
+.catalog-controls {
+    background: #e8f4f8;
+    border-radius: 5px;
+}
+.catalog-controls select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+
+/* Карточка товара */
+.product-card {
+    background: #ffffff93;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 5px;
+    margin-bottom: 8px;
+}
+.price {
+    font-weight: bold;
+    color: #1c4355;
+    font-size: 18px;
+}
+.add-to-cart {
+    background: #6d96ad;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.add-to-cart:hover {
+    background: #44687c;
+}
+
+/* Корзина */
+.cart-section {
+    background: #ffffffa2;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 2px solid #6d96ad;
+}
+.cart-list {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.remove-item {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.cart-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.btn-primary {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-secondary {
+    background: #95a5a6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-primary:hover { background: #219653; }
+.btn-secondary:hover { background: #7f8c8d; }
+
+.hidden { display: none !important; }

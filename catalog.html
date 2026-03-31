@@ -1,0 +1,101 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Травки будущего - Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+        </ul>
+    </nav>
+    
+    <hr>
+    
+    <h2>Каталог товаров</h2>
+
+    <div class="catalog-controls">
+        <label for="category-filter">Фильтр по категории:</label>
+        <!-- label - текстовая подпись для элемента формы -->
+        <select id="category-filter">
+            <option value="all">Все товары</option>
+            <option value="greens">Зелень</option>
+            <option value="vegetables">Овощи</option>
+            <option value="trees">Плодовые деревья</option>
+        </select>
+    </div>
+    
+    <!-- Товар 1 -->
+    <div class="product-card" data-category="greens">
+        <a href="dill.html">
+            <img src="укроп.png" alt="Укроп Гладиатор" width="200" height="150">
+            <p>Укроп "Гладиатор"</p>
+        </a>
+        <p class="price" data-price="45">45 ₽</p>
+        <button class="add-to-cart" 
+                data-id="dill" 
+                data-name="Укроп Гладиатор" 
+                data-price="45"
+                data-category="greens">
+            В корзину
+        </button>
+    </div>
+    
+    <!-- Товар 2 -->
+    <div class="product-card" data-category="vegetables">
+        <a href="tomat.html">
+            <img src="томат.png" alt="Томат Бычье сердце" width="200" height="150">
+            <p>Томат "Бычье сердце"</p>
+        </a>
+        <p class="price" data-price="80">80 ₽</p>
+        <button class="add-to-cart" 
+                data-id="tomat" 
+                data-name="Томат Бычье сердце" 
+                data-price="80"
+                data-category="vegetables">
+            В корзину
+        </button>
+    </div>
+    
+    <!-- Товар 3 -->
+    <div class="product-card" data-category="trees">
+        <a href="apple.html">
+            <img src="яблоня.png" alt="Яблоня Слава победителям" width="200" height="150">
+            <p>Яблоня "Слава победителям"</p>
+        </a>
+        <p class="price" data-price="350">350 ₽</p>
+        <button class="add-to-cart" 
+                data-id="apple" 
+                data-name="Яблоня Слава победителям" 
+                data-price="350"
+                data-category="trees">
+            В корзину
+        </button>
+    </div>
+
+
+    
+    <!-- Семантический тег для доп контента, типо блок вспомогательный -->
+    <aside class="cart-section">
+        <h3>Ваша корзина</h3>
+        <ul id="cart-items" class="cart-list"></ul>
+        <p><strong>Итого: <span id="cart-total">0</span> ₽</strong></p>
+        <!-- span строчный контейнер для части текста -->
+        <div class="cart-buttons">
+            <button id="clear-cart" class="btn-secondary">Очистить</button>
+            <button id="pay-btn" class="btn-primary">Оплатить</button>
+        </div>
+    </aside>
+
+    <hr>
+    
+    <footer>
+        <small>&copy; 2026 Травки будущего. Все права защищены</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
