@@ -8,8 +8,7 @@ const productsDB = [
 
 // Сохранение корзины в LocalStorage
 const saveCartToLocalStorage = () => {
-    LocalStorage.setItem("cart", JSON.stringify(cart));
-    console.log('Корзина сохранена:', cart); 
+    localStorage.setItem("cart", JSON.stringify(cart));
 };
     
 // Загрузка корзины из LocalStorage
@@ -17,7 +16,6 @@ const loadCartFromLocalStorage = () => {
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
         cart = JSON.parse(savedCart);
-        console.log('Корзина загружена:', cart); // для отладки, потом можно удалить
         renderCart();
     }
 };
@@ -152,5 +150,4 @@ if (payBtn) {
     payBtn.addEventListener('click', handlePayment);
 }
 
-// Первоначальная отрисовка корзины
-renderCart();
+loadCartFromLocalStorage();
