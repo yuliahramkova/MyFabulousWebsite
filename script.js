@@ -6,6 +6,23 @@ const productsDB = [
     { id: 'apple', name: 'Яблоня Слава победителям', price: 481, category: 'trees' }
 ];
 
+// Сохранение корзины в LocalStorage
+const saveCartToLocalStorage = () => {
+    LocalStorage.setItem("cart", JSON.stringify(cart));
+    console.log('Корзина сохранена:', cart); 
+};
+    
+// Загрузка корзины из LocalStorage
+const loadCartFromLocalStorage = () => {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        console.log('Корзина загружена:', cart); // для отладки, потом можно удалить
+        renderCart();
+    }
+};
+
+
 // Добавление товара в корзину
 const addToCart = (product) => {
     const existing = cart.find(item => item.id === product.id);
@@ -14,12 +31,14 @@ const addToCart = (product) => {
     } else {
         cart.push({ ...product, quantity: 1 }); /* со всем уже сущ свойствами product*/
     }
+    saveCartToLocalStorage();
     renderCart();
 };
 
 // Удаление товара из корзины
 const removeFromCart = (id) => {
     cart = cart.filter(item => item.id !== id);
+    saveCartToLocalStorage();
     renderCart();
 };
 
@@ -88,6 +107,7 @@ const handlePayment = () => {
     if (confirmPay) {
         alert('Оплата прошла успешно! Спасибо за покупку =)');
         cart = [];
+        saveCartToLocalStorage(); 
         renderCart();
     }
 };
@@ -120,6 +140,7 @@ if (clearBtn) {
     clearBtn.addEventListener('click', () => {
         if (cart.length > 0 && confirm('Очистить корзину?')) {
             cart = [];
+            saveCartToLocalStorage();
             renderCart();
         }
     });
