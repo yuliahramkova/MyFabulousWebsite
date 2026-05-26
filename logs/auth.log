@@ -1,0 +1,4 @@
+2026-05-01 17:57:32 | ip=::1 | login=admin | action=LOGOUT
+2026-05-01 17:57:39 | ip=::1 | login=user | action=SUCCESS_LOGIN | info=Роль: user
+2026-05-01 17:57:52 | ip=::1 | login=user | action=LOGOUT
+2026-05-01 17:57:58 | ip=::1 | login=admin | action=SUCCESS_LOGIN | info=Роль: admin

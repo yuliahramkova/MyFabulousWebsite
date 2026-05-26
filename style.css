@@ -176,3 +176,82 @@ h1 {
 .btn-secondary:hover { background: #7f8c8d; }
 
 .hidden { display: none !important; }
+
+
+/* Доп стили для авторизации */
+.user-bar {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.user-info {
+    color: white;
+    font-size: 14px;
+}
+
+.user-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.user-info a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка выхода */
+.logout-btn {
+    background-color: #e74c3c;
+    padding: 5px 12px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+    text-decoration: none !important;
+}
+
+/* Кнопка входа */
+.login-link {
+    background-color: #27ae60;
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+
+.login-link:hover {
+    background-color: #219653;
+    text-decoration: none !important;
+}
+
+/* Бейдж администратора */
+.admin-badge {
+    background-color: #e1f4ff;
+    color: #2c3e50;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+/* Сообщения об ошибках (для страницы логина) */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
